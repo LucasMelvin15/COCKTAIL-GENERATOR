@@ -15,7 +15,7 @@ function getCocktail() {
       let instructions = `${
         drink[0].strInstructions ? drink[0].strInstructions : "No instructions"
       }`;
-      document.getElementById("ins-h").innerText = instructions;
+      
 
       let ingredients = `${drink[0].strIngredient1 &&
         drink[0].strIngredient1}, ${drink[0].strIngredient2 &&
@@ -23,10 +23,14 @@ function getCocktail() {
         drink[0].strIngredient3}, ${drink[0].strIngredient4 &&
         drink[0].strIngredient4}, ${drink[0].strIngredient5 &&
         drink[0].strIngredient5}`;
+       
 
+       document.getElementById("drinkNm").innerText=drink[0].strDrink;
       document.querySelector("img").src = drink[0].strDrinkThumb;
 
       document.getElementById("ing-list").innerText = ingredients;
+      document.getElementById("ins-h").innerText = instructions;
+      
 
       //was trying to do something complex below, but nah
       /*let ingrArray = ingredients.split(",");
